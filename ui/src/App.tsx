@@ -26,7 +26,7 @@ const updateByIndex = <T,>(i: number, target: T, list: T[]) =>
   list.map((item, idx) => (idx === i ? target : item))
 
 const toXY = (i: number): [number, number] => [i % 10, 9 - Math.floor(i / 10)]
-const toI = (x: number, y: number) => (10 - y - 1) * 10 + x
+const toI = (x: number, y: number) => (9 - y) * 10 + x
 
 function App({}: IProps) {
   const [pos, setPos] = useState<[number, number]>([0, 0])
